@@ -15,7 +15,7 @@ function print(x) {
 
 function billTotal(subtotal) {
 	numberWithDecimal = (subtotal*.15)+(subtotal*.095)+subtotal ;
-	return "Your total comes to " + Math.round(numberWithDecimal*100)/100;
+	return "Your total comes to $" + Math.round(numberWithDecimal*100)/100;
 }
 
 
