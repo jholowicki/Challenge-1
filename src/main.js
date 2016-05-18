@@ -13,9 +13,11 @@ function print(x) {
 // i.e. Math.round(15.051102 * 100)/100 becomes 15.05,
 
 
-function billTotal(total) {
-	// write code here
+function billTotal(subtotal) {
+	numberWithDecimal = (subtotal*.15)+(subtotal*.095)+subtotal ;
+	return "Your total comes to " + Math.round(numberWithDecimal*100)/100;
 }
+
 
 // billTotal(21.55); // "Your total comes to $26.83"
 
@@ -34,7 +36,13 @@ function billTotal(total) {
 // If you're feeling uninspired, feel free to use "smileys" to convey emotion.
 
 function animalNoise(animal, emotion) {
-// TODO: your code here
+	if (animal = "cat" && emotion = "hungry") {
+		return "Meow, meow, meow!" ;
+	}
+	if (animal = "dog" && emotion = "lonely"){
+		return "Hoooowwwwwwwlllll";
+	}
+	return "Bark! Bark! Not an available input. Bark!";
 }
 
 
@@ -54,6 +62,26 @@ function animalNoise(animal, emotion) {
 // What should digitalSum of a single-digit number 
 // return, e.g. digitalSum(8)?
 
-function digitalSum(num) {
-  // TODO: your code here
+
+// <<<<<(((*-*)))>>>>> I did it in the "for loop" AND "while loop" !! 
+ function digitalSum(num) {
+	var sum=0;
+    while(num > 0) {
+       sum = sum + num % 10;
+       num = Math.floor(num/10);
+      }
+    return ("Sum of digits  "+sum);    
+         
+   }
+   
 }
+
+function digitalSum(num){
+	var sum =1 
+	for (i=0; i < num; i++){
+		sum = sum +num % 10;
+		num = Math.floor(num/10);
+	}
+	return ("Sum of digits " +sum);
+}
+
